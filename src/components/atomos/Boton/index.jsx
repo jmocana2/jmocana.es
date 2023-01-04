@@ -7,12 +7,10 @@ import { Button } from '@mui/material';
  */
 export const Boton = ({ label, primary, backgroundColor, ...props }) => {
   return (
-    <div className="bg-orange-200">
-      <button type="button" {...props}>
-        <Button variant="contained" className="bg-black">
-          {label}
-        </Button>
-      </button>
+    <div className={primary ? 'bg-orange-500' : 'bg-orange-200'}>
+      <Button variant="contained" className="bg-black">
+        {label}
+      </Button>
     </div>
   );
 };
