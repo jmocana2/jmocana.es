@@ -540,14 +540,12 @@ video {
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
-#root .bg-orange-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(249 115 22 / var(--tw-bg-opacity));
+#root .bg-primary {
+  background-color: var(--color-primary);
 }
 
-#root .bg-orange-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 215 170 / var(--tw-bg-opacity));
+#root .bg-secondary {
+  background-color: var(--color-secondary);
 }
 
 #root .p-8 {

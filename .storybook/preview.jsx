@@ -1,3 +1,5 @@
+import '../src/css/theme.css';
+
 import {
   DEFAULT_THEME,
   withTailwindTheme

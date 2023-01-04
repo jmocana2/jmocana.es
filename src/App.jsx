@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from '@mui/material';
+import { Boton } from './components/atomos/Boton';
 import './css/App.css';
 
 function App() {
@@ -9,8 +10,9 @@ function App() {
         Portfolio Jose María Ocaña
       </h1>
       <Button variant="contained" className="bg-black">
-        Contained
+        Botón MUI con tailwind
       </Button>
+      <Boton primary>Botón JmocanaUI con tailwind y theme</Boton>
     </div>
   );
 }

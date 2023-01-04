@@ -5,13 +5,14 @@ import { Button } from '@mui/material';
 /**
  * Primary UI component for user interaction
  */
-export const Boton = ({ label, primary, backgroundColor, ...props }) => {
+export const Boton = ({ children, primary, backgroundColor, ...props }) => {
   return (
-    <div className={primary ? 'bg-orange-500' : 'bg-orange-200'}>
-      <Button variant="contained" className="bg-black">
-        {label}
-      </Button>
-    </div>
+    <Button
+      variant="contained"
+      className={primary ? 'bg-primary' : 'bg-secondary'}
+    >
+      {children}
+    </Button>
   );
 };
 
@@ -19,7 +20,7 @@ Boton.propTypes = {
   /**
    * Button contents
    */
-  label: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
   /**
    * Is this the principal call to action on the page?
    */
