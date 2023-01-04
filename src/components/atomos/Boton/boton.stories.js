@@ -14,6 +14,6 @@ export default {
 export const Primary = {
   args: {
     primary: true,
-    label: 'Botón'
+    children: 'Botón'
   }
 };
