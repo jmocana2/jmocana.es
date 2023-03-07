@@ -16,7 +16,7 @@ import AnimatedPhoto from '../../moleculas/AnimatedPhoto';
 
 function Header() {
   return (
-    <AppBar position="static" className="bg-white shadow-none">
+    <AppBar position="static" className="bg-white shadow-none mb-10">
       <div className="bg-primary ease-in duration-300">
         <Container maxWidth="xl">
           <Toolbar disableGutters>
