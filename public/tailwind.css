@@ -513,8 +513,66 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.container {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
 .jmui .static {
   position: static;
+}
+
+.jmui .absolute {
+  position: absolute;
+}
+
+.jmui .relative {
+  position: relative;
+}
+
+.jmui .-left-32 {
+  left: -8rem;
+}
+
+.jmui .mt-4 {
+  margin-top: 1rem;
+}
+
+.jmui .ml-auto {
+  margin-left: auto;
+}
+
+.jmui .mr-auto {
+  margin-right: auto;
 }
 
 .jmui .mr-2 {
@@ -525,12 +583,24 @@ video {
   margin-top: 0.25rem;
 }
 
-.jmui .mr-4 {
-  margin-right: 1rem;
-}
-
 .jmui .mr-1 {
   margin-right: 0.25rem;
+}
+
+.jmui .ml-2 {
+  margin-left: 0.5rem;
+}
+
+.jmui .-mt-1 {
+  margin-top: -0.25rem;
+}
+
+.jmui .mb-10 {
+  margin-bottom: 2.5rem;
+}
+
+.jmui .mb-5 {
+  margin-bottom: 1.25rem;
 }
 
 .jmui .block {
@@ -545,52 +615,44 @@ video {
   display: contents;
 }
 
-.jmui .h-7 {
-  height: 1.75rem;
+.jmui .h-32 {
+  height: 8rem;
 }
 
-.jmui .h-10 {
-  height: 2.5rem;
-}
-
-.jmui .h-2 {
-  height: 0.5rem;
-}
-
-.jmui .h-4 {
-  height: 1rem;
-}
-
-.jmui .h-6 {
-  height: 1.5rem;
+.jmui .h-12 {
+  height: 3rem;
 }
 
 .jmui .h-5 {
   height: 1.25rem;
 }
 
-.jmui .w-7 {
-  width: 1.75rem;
+.jmui .h-7 {
+  height: 1.75rem;
 }
 
-.jmui .w-10 {
-  width: 2.5rem;
+.jmui .w-32 {
+  width: 8rem;
 }
 
-.jmui .w-2 {
-  width: 0.5rem;
-}
-
-.jmui .w-4 {
-  width: 1rem;
-}
-
-.jmui .w-6 {
-  width: 1.5rem;
+.jmui .w-12 {
+  width: 3rem;
 }
 
 .jmui .w-5 {
   width: 1.25rem;
+}
+
+.jmui .w-7 {
+  width: 1.75rem;
+}
+
+.jmui .cursor-help {
+  cursor: help;
+}
+
+.jmui .flex-col {
+  flex-direction: column;
 }
 
 .jmui .items-center {
@@ -601,6 +663,34 @@ video {
   justify-content: flex-end;
 }
 
+.jmui .justify-center {
+  justify-content: center;
+}
+
+.jmui .overflow-hidden {
+  overflow: hidden;
+}
+
+.jmui .rounded-full {
+  border-radius: 9999px;
+}
+
+.jmui .rounded {
+  border-radius: 0.25rem;
+}
+
+.jmui .border-\[2px\] {
+  border-width: 2px;
+}
+
+.jmui .border-l-\[1px\] {
+  border-left-width: 1px;
+}
+
+.jmui .border-primary {
+  border-color: var(--color-primary);
+}
+
 .jmui .bg-primary {
   background-color: var(--color-primary);
 }
@@ -609,33 +699,64 @@ video {
   background-color: var(--color-secondary);
 }
 
-.jmui .bg-transparent {
-  background-color: transparent;
-}
-
-.jmui .fill-black {
-  fill: #000;
-}
-
-.jmui .fill-primary {
-  fill: var(--color-primary);
-}
-
-.jmui .fill-secondary {
-  fill: var(--color-secondary);
-}
-
-.jmui .fill-gray-300 {
-  fill: #d1d5db;
+.jmui .bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .jmui .fill-gray-600 {
   fill: #4b5563;
 }
 
+.jmui .fill-black {
+  fill: #000;
+}
+
+.jmui .p-10 {
+  padding: 2.5rem;
+}
+
+.jmui .pl-2 {
+  padding-left: 0.5rem;
+}
+
+.jmui .text-center {
+  text-align: center;
+}
+
+.jmui .font-logo {
+  font-family: Anton, sans-serif;
+}
+
+.jmui .text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.jmui .text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.jmui .uppercase {
+  text-transform: uppercase;
+}
+
+.jmui .tracking-wide {
+  letter-spacing: 0.025em;
+}
+
+.jmui .text-secondary {
+  color: var(--color-secondary);
+}
+
 .jmui .text-gray-600 {
   --tw-text-opacity: 1;
   color: rgb(75 85 99 / var(--tw-text-opacity));
+}
+
+.jmui .text-acent {
+  color: var(--color-acent);
 }
 
 .jmui .text-gray-700 {
@@ -653,22 +774,30 @@ video {
   transition-duration: 300ms;
 }
 
+.jmui .duration-200 {
+  transition-duration: 200ms;
+}
+
 .jmui .ease-in {
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
-}
-
-.jmui .hover\:bg-primary:hover {
-  background-color: var(--color-primary);
-}
-
-.jmui .hover\:bg-secondary:hover {
-  background-color: var(--color-secondary);
 }
 
 .jmui .hover\:bg-transparent:hover {
   background-color: transparent;
 }
 
+.jmui .hover\:bg-secondary:hover {
+  background-color: var(--color-secondary);
+}
+
 .jmui .hover\:fill-black:hover {
   fill: #000;
+}
+
+.jmui .hover\:text-primary:hover {
+  color: var(--color-primary);
+}
+
+.jmui .group:hover .group-hover\:left-0 {
+  left: 0px;
 }

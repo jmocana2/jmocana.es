@@ -1,0 +1,8 @@
+html{
+  font-size: 16px;
+}
+
+.tipo1 {  
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(1rem, 1.2vw , 2rem);
+}

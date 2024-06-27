@@ -1,0 +1,13 @@
+p{
+  font-size: clamp(1rem, 1.2vw , 4rem);
+}
+
+.p1{
+  width: min-content;
+}
+.p2{
+  width: max-content;
+}
+.p3{
+  width: fit-content;
+}
