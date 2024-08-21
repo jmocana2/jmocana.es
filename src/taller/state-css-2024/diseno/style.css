@@ -1,0 +1,19 @@
+.diseno{
+  background-color:chocolate;
+
+  .border-block{
+    border-block: 5px solid black;    
+  }
+  .border-inline{
+    border-inline: 5px solid black;
+    height: 50px;    
+  }
+  .dvh{
+    height: 100dvh;
+  }
+}
+[popover]{
+  inset: unset;
+  bottom: anchor(top);
+  left: anchor(center);
+}
