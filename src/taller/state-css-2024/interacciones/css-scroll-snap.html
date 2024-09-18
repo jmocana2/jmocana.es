@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /*** The new CSS Reset - version 1.4.5 (last updated 13.1.2022) ***/
+
+      /*
+    Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+    - The "symbol *" part is to solve Firefox SVG sprite bug
+ */
+      *:where(:not(iframe, canvas, img, svg, video):not(svg *, symbol *)) {
+        all: unset;
+        display: revert;
+      }
+
+      /* Preferred box-sizing value */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      /* Reapply the pointer cursor for anchor tags */
+      a {
+        cursor: revert;
+      }
+
+      /* Remove list styles (bullets/numbers) */
+      ol,
+      ul,
+      menu {
+        list-style: none;
+      }
+
+      /* For images to not be able to exceed their container */
+      img {
+        max-width: 100%;
+      }
+
+      /* removes spacing between cells in tables */
+      table {
+        border-collapse: collapse;
+      }
+
+      /* revert the 'white-space' property for textarea elements on Safari */
+      textarea {
+        white-space: revert;
+      }
+
+      /* fix the feature of 'hidden' attribute.
+   display:revert; revert to element instead of attribute */
+      :where([hidden]) {
+        display: none;
+      }
+
+      /* revert for bug in Chromium browsers
+   - fix for the content editable attribute will work properly. */
+      :where([contenteditable]) {
+        -moz-user-modify: read-write;
+        -webkit-user-modify: read-write;
+        overflow-wrap: break-word;
+        -webkit-line-break: after-white-space;
+      }
+
+      /* apply back the draggable feature - exist only in Chromium and Safari */
+      :where([draggable='true']) {
+        -webkit-user-drag: element;
+      }
+    </style>
+    <style>
+      .slider {
+        position: relative;
+      }
+
+      .slider__slides {
+        max-height: 80vh;
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        overscroll-behavior-x: contain;
+      }
+
+      .slider__slide {
+        scroll-snap-align: start;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+      }
+
+      .slider__slide > img {
+        max-width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      .slider--fullscreen {
+        height: 100vh;
+      }
+
+      .slider--fullscreen .slider__slides {
+        max-height: 100vh;
+        gap: 0;
+      }
+
+      .slider--fullscreen .slider__slide {
+        height: 100vh;
+      }
+
+      .slider--fullscreen .slider__slide img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slider">
+      <nav class="slider__nav">
+        <button title="Go to the previous slide" data-prev>&larr;</button>
+        <button title="Go to the next slide" data-next>&rarr;</button>
+      </nav>
+
+      <div class="slider__slides" data-slider>
+        <figure class="slider__slide">
+          <img src="https://picsum.photos/1200/800" alt="" />
+        </figure>
+        <figure class="slider__slide">
+          <img src="https://picsum.photos/1000/900" alt="" />
+        </figure>
+        <figure class="slider__slide">
+          <img src="https://picsum.photos/1400/1400" alt="" />
+        </figure>
+      </div>
+    </div>
+    <script src="./carousel.js"></script>
+  </body>
+</html>
